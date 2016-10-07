@@ -99,10 +99,12 @@ public class MainActivity extends AppCompatActivity {
         imgScaleUpXAnim.setInterpolator(DECCELERATE_INTERPOLATOR);
 
         ObjectAnimator imgScaleDownYAnim = ObjectAnimator.ofFloat(heartImageView, "scaleY", 1f, 0f);
-        imgScaleDownYAnim.setDuration(300);
+        imgScaleDownYAnim.setDuration(10);
+        imgScaleDownYAnim.setStartDelay(1000);
         imgScaleDownYAnim.setInterpolator(ACCELERATE_INTERPOLATOR);
         ObjectAnimator imgScaleDownXAnim = ObjectAnimator.ofFloat(heartImageView, "scaleX", 1f, 0f);
-        imgScaleDownXAnim.setDuration(300);
+        imgScaleDownXAnim.setDuration(10);
+        imgScaleDownXAnim.setStartDelay(1000);
         imgScaleDownXAnim.setInterpolator(ACCELERATE_INTERPOLATOR);
 
         animatorSet.playTogether(bgScaleYAnim, bgScaleXAnim, bgAlphaAnim, imgScaleUpYAnim, imgScaleUpXAnim);
